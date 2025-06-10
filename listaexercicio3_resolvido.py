@@ -31,6 +31,8 @@ arquivo = "https://raw.githubusercontent.com/isabela-tech/exercicios_lista3/refs
 df = pd.read_csv(arquivo, sep=';')
 st.dataframe(df.head(len(df)))
 
+st.header("Lista de Exercícios 3")
+
 """2) Atualize a DataFrame criado no Exe1, adicionando mais uma linha ao final com os dados referentes ao mês de dezembro de 2026. Depois apresente as últimas linhas da df para checar se ocorreu como deveria. (Peso: 2,0)
 
 mes | ano | Projeto1 | Projeto2 | Projeto3 | Projeto4 | Projeto5
@@ -92,7 +94,8 @@ print(f"Projeto5: R$ {valor_presente(df['Projeto5'], 0.02):,.2f}")
 """5) Gere um gráfico de dispersão cruzando os dados do `Projeto1` e `Projeto2`, com marcadores verdes e em formato de estrela. (Peso: 2,0)"""
 
 import matplotlib.pyplot as plt
-df.plot(kind = 'scatter', x = 'Projeto1', y = 'Projeto2', color='darkgreen', marker='*')
+fig, ax = plt.subplots()
+df.plot(kind = 'scatter', x = 'Projeto1', y = 'Projeto2', color='darkgreen', marker='*', ax=ax)
 st.pyplot()
 
 """6) Crie um gráfico de linha que mostre a evolução dos valores dos projetos ao longo do tempo. (Peso: 2,0)
