@@ -27,11 +27,12 @@ st.set_page_config(
 )
 import pandas as pd
 
+st.header("Lista de Exercícios 3")
+
 arquivo = "https://raw.githubusercontent.com/isabela-tech/exercicios_lista3/refs/heads/main/projetos.csv"
 df = pd.read_csv(arquivo, sep=';')
 st.dataframe(df.head(len(df)))
 
-st.header("Lista de Exercícios 3")
 
 """2) Atualize a DataFrame criado no Exe1, adicionando mais uma linha ao final com os dados referentes ao mês de dezembro de 2026. Depois apresente as últimas linhas da df para checar se ocorreu como deveria. (Peso: 2,0)
 
