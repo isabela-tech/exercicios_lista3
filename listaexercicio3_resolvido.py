@@ -30,7 +30,7 @@ import pandas as pd
 st.header("Lista de Exercícios 3")
 
 arquivo = "https://raw.githubusercontent.com/isabela-tech/exercicios_lista3/refs/heads/main/projetos.csv"
-df = pd.read_csv(arquivo, sep=';')
+df = pd.read_csv('empresas_dados.csv', sep=';')
 st.dataframe(df.head(len(df)))
 
 
